@@ -1,0 +1,26 @@
+{
+  "paymentProductGroups": [
+    {
+      "deviceFingerprintEnabled" : true,
+      "accountsOnFile" : [ ],
+      "allowsInstallments" : false,
+      "displayHints" : {
+        "displayOrder" : 1,
+        "label" : "Cards",
+        "logo" : "cards_logo"
+      },
+      "id" : "cards"
+    },
+    {
+      "deviceFingerprintEnabled" : true,
+      "accountsOnFile" : [ ],
+      "allowsInstallments" : false,
+      "displayHints" : {
+        "displayOrder" : 2,
+        "label" : "Apps",
+        "logo" : "apps_logo"
+      },
+      "id" : "apps"
+    }
+  ]
+}

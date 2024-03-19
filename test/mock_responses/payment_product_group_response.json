@@ -1,0 +1,125 @@
+{
+  "deviceFingerprintEnabled" : true,
+  "accountsOnFile" : [ ],
+  "allowsInstallments" : false,
+  "displayHints" : {
+    "displayOrder" : 1,
+    "label" : "Cards",
+    "logo" : "cards_logo"
+  },
+  "fields" : [ {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validationRules" : [{
+          "validationType": "LENGTH",
+          "messageId": "length",
+          "maxLength" : 19,
+          "minLength" : 12
+        }, {
+          "validationType": "LUHN",
+          "messageId": "luhn"
+        } ]
+    },
+    "displayHints" : {
+      "alwaysShow" : false,
+      "displayOrder" : 0,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "Card number",
+      "mask" : "{{9999}} {{9999}} {{9999}} {{9999}} {{999}}",
+      "obfuscate" : false,
+      "placeholderLabel" : "**** **** **** ****",
+      "preferredInputType" : "IntegerKeyboard"
+    },
+    "id" : "cardNumber",
+    "type" : "numericstring"
+  }, {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validationRules" : [{
+          "validationType": "EXPIRATIONDATE",
+          "messageId": "expirationDate"
+        }, {
+          "validationType": "LENGTH",
+          "messageId": "length",
+          "maxLength" : 4,
+          "minLength" : 4
+        }, {
+          "validationType": "REGULAREXPRESSION",
+          "messageId": "regularExpression",
+          "regex" : "^(?:0[1-9]|1[0-2])[0-9]{2}$"
+        } ]
+    },
+    "displayHints" : {
+      "alwaysShow" : false,
+      "displayOrder" : 2,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "Expiry date",
+      "mask" : "{{99}}/{{99}}",
+      "obfuscate" : false,
+      "placeholderLabel" : "MM/YY",
+      "preferredInputType" : "IntegerKeyboard"
+    },
+    "id" : "expiryDate",
+    "type" : "expirydate"
+  }, {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validationRules" : [{
+          "validationType": "LENGTH",
+          "messageId": "length",
+          "maxLength" : 4,
+          "minLength" : 3
+        } ]
+    },
+    "displayHints" : {
+      "alwaysShow" : true,
+      "displayOrder" : 3,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "CVV",
+      "mask" : "{{9999}}",
+      "obfuscate" : false,
+      "placeholderLabel" : "123",
+      "preferredInputType" : "IntegerKeyboard",
+      "tooltip" : {
+        "image" : "ccv_image",
+        "label" : "Please enter your security code as shown in the image"
+      }
+    },
+    "id" : "cvv",
+    "type" : "numericstring"
+  }, {
+    "dataRestrictions" : {
+      "isRequired" : true,
+      "validationRules" : [{
+          "validationType": "LENGTH",
+          "messageId": "length",
+          "maxLength" : 50,
+          "minLength" : 2
+        }, {
+          "validationType": "REGULAREXPRESSION",
+          "messageId": "regularExpression",
+          "regex" : "^[-\\sA-Za-z0-9ªºÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĹĺĻļĽľĿŀŁłŃńŅņŇňŉŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǺǻǼǽǾǿȘșȚțΆΈΉΊΌΎΏΑΓΔΕΖΗΙΚΛΝΟΡΣΥΩΪΫάέήίαβγδεζηικλμνξοπρςστυψωϊϋόύώЁЄЇАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёєїҐґẠạẢảấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹÞþ.'/]+$"
+        } ]
+    },
+    "displayHints" : {
+      "alwaysShow" : true,
+      "displayOrder" : 4,
+      "formElement" : {
+        "type" : "text"
+      },
+      "label" : "Cardholder name",
+      "obfuscate" : false,
+      "placeholderLabel" : "John Doe",
+      "preferredInputType" : "StringKeyboard"
+    },
+    "id" : "cardholderName",
+    "type" : "string"
+  } ],
+  "id" : "cards"
+}

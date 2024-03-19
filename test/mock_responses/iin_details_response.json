@@ -1,0 +1,16 @@
+{
+  "status" : "SUPPORTED",
+  "coBrands" : [
+    {
+      "isAllowedInContext" : true,
+      "paymentProductId" : "3"
+    },
+    {
+      "isAllowedInContext" : false,
+      "paymentProductId" : "119"
+    }
+  ],
+  "countryCode" : "US",
+  "isAllowedInContext" : true,
+  "paymentProductId" : "3"
+}

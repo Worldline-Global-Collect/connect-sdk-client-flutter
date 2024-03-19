@@ -1,0 +1,13 @@
+{
+  "entries" : [ {
+    "countryNames" : [ "Netherlands" ],
+    "issuerId" : "BANKNL",
+    "issuerList" : "short",
+    "issuerName" : "TEST iDEAL issuer"
+  }, {
+    "countryNames" : [ "Netherlands" ],
+    "issuerId" : "BANKNL2Y",
+    "issuerList" : "short",
+    "issuerName" : "eWL Issuer Test Simulation"
+  } ]
+}

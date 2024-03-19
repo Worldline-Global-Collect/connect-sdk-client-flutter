@@ -1,0 +1,61 @@
+{
+  "paymentProducts": [
+    {
+      "acquirerCountry": "NL",
+      "allowsInstallments": false,
+      "allowsRecurring": true,
+      "allowsTokenization": true,
+      "deviceFingerprintEnabled": false,
+      "displayHints": {
+        "displayOrder": 0,
+        "label": "American Express",
+        "logo": "American_Express_logo"
+      },
+      "id": "2",
+      "mobileIntegrationLevel": "NO_SUPPORT",
+      "paymentMethod": "card",
+      "paymentProductGroup": "Cards",
+      "usesRedirectionTo3rdParty": false,
+      "supportsMandates": true
+    },
+    {
+      "acquirerCountry": "US",
+      "allowsInstallments": false,
+      "allowsRecurring": false,
+      "allowsTokenization": false,
+      "deviceFingerprintEnabled": false,
+      "displayHints": {
+        "displayOrder": 1,
+        "label": "APPLEPAY",
+        "logo": "APPLEPAY_logo"
+      },
+      "id": "302",
+      "paymentMethod": "mobile",
+      "usesRedirectionTo3rdParty": false,
+      "supportsMandates": false,
+      "paymentProduct302SpecificData": {
+        "networks": [
+          "Visa",
+          "MasterCard"
+        ]
+      }
+    },
+    {
+      "acquirerCountry": "BE",
+      "allowsInstallments": false,
+      "allowsRecurring": false,
+      "allowsTokenization": false,
+      "deviceFingerprintEnabled": true,
+      "displayHints": {
+        "displayOrder": 2,
+        "label": "BCMC",
+        "logo": "BCMC_logo"
+      },
+      "id": "3012",
+      "paymentMethod": "card",
+      "paymentProductGroup": "Cards",
+      "usesRedirectionTo3rdParty": false,
+      "supportsMandates": false
+    }
+  ]
+}
