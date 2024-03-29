@@ -62,7 +62,8 @@ class ConnectSDKMethodCallHandler(private val contextReference: WeakReference<Co
             enableNetworkLogs = configurationWithoutContext.enableNetworkLogs,
             applicationId = configurationWithoutContext.applicationId,
             ipAddress = configurationWithoutContext.ipAddress,
-            preLoadImages = configurationWithoutContext.preLoadImages
+            preLoadImages = configurationWithoutContext.preLoadImages,
+            sdkIdentifier = configurationWithoutContext.sdkIdentifier
         )
             .build()
 

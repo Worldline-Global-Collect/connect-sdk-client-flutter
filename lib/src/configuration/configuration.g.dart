@@ -48,6 +48,7 @@ Map<String, dynamic> _$ConnectSDKConfigurationToJson(
       'applicationId': instance.applicationId,
       'ipAddress': instance.ipAddress,
       'preLoadImages': instance._preLoadImages,
+      'sdkIdentifier': instance._sdkIdentifier,
     };
 
 PaymentConfiguration _$PaymentConfigurationFromJson(Map<String, dynamic> json) {

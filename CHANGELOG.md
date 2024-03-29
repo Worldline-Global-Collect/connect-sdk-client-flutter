@@ -1,3 +1,6 @@
+## 1.1.1
+## Fixed
+- Fixed an issue where the collected metadata did not properly identify the Flutter SDK.
 ## 1.1.0
 This SDK is a rebranded and updated version of the SDK that was previously published under the Ingenico name. Next to renaming to Worldline, there were some minor changes. Please have a look at the release notes below to see what has changed. Previous versions and release notes of this SDK can be found [here](https://github.com/Ingenico-ePayments/connect-sdk-client-flutter).
 

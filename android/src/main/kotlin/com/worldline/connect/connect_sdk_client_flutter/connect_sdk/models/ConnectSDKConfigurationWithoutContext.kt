@@ -21,5 +21,6 @@ data class ConnectSDKConfigurationWithoutContext(
     val enableNetworkLogs: Boolean,
     val applicationId: String?,
     val ipAddress: String?,
-    val preLoadImages: Boolean
+    val preLoadImages: Boolean,
+    val sdkIdentifier: String
 )

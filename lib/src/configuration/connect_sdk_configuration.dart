@@ -38,6 +38,10 @@ class ConnectSDKConfiguration {
   @JsonKey(includeToJson: true, name: "preLoadImages")
   final bool _preLoadImages = false;
 
+  /// This property is used to set the correct SDK identifier when configuring the native SDKs
+  @JsonKey(includeToJson: true, name: "sdkIdentifier")
+  final String _sdkIdentifier = "FlutterClientSDK/v1.1.1";
+
   ConnectSDKConfiguration(this.sessionConfiguration,
       {this.enableNetworkLogs = false, this.applicationId, this.ipAddress});
 
