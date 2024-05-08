@@ -24,8 +24,7 @@ class PrivacyPolicyResponse {
   @JsonKey()
   final String htmlContent;
 
-  PrivacyPolicyResponse(
-      {required this.htmlContent});
+  PrivacyPolicyResponse({required this.htmlContent});
 
   factory PrivacyPolicyResponse.fromJson(Map<String, dynamic> json) =>
       _$PrivacyPolicyResponseFromJson(json);

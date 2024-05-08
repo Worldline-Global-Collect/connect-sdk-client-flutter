@@ -31,9 +31,10 @@ final class _ConnectSDKImpl extends ConnectSDK {
       _ConnectSDKCommunicator();
 
   @override
-  initialize(
-      {required ConnectSDKConfiguration connectSDKConfiguration,
-      required PaymentConfiguration paymentConfiguration}) {
+  initialize({
+    required ConnectSDKConfiguration connectSDKConfiguration,
+    required PaymentConfiguration paymentConfiguration,
+  }) {
     _initializationStatus = SdkInitializationStatus.initializing;
     _clientApi = ClientApi(connectSDKConfiguration);
     _connectSDKConfiguration = connectSDKConfiguration;
@@ -41,8 +42,10 @@ final class _ConnectSDKImpl extends ConnectSDK {
     _initializeNativeSdk(connectSDKConfiguration, paymentConfiguration);
   }
 
-  _initializeNativeSdk(ConnectSDKConfiguration connectSDKConfiguration,
-      PaymentConfiguration paymentConfiguration) async {
+  _initializeNativeSdk(
+    ConnectSDKConfiguration connectSDKConfiguration,
+    PaymentConfiguration paymentConfiguration,
+  ) async {
     final SdkInitializationStatus result = await _connectCommunicator
         .initializeSdk(InitializeConnectSdkRequest(
             connectSDKConfiguration, paymentConfiguration))
@@ -86,11 +89,12 @@ final class _ConnectSDKImpl extends ConnectSDK {
   }
 
   @override
-  encryptPaymentRequest(
-      {required SdkPreparePaymentRequest paymentRequest,
-      required void Function(EncryptedPaymentRequest encryptedPaymentRequest)
-          onSuccess,
-      required void Function(NativeException e) onFailure}) {
+  encryptPaymentRequest({
+    required SdkPreparePaymentRequest paymentRequest,
+    required void Function(EncryptedPaymentRequest encryptedPaymentRequest)
+        onSuccess,
+    required void Function(NativeException e) onFailure,
+  }) {
     _connectCommunicator
         .encryptPaymentRequest(
             paymentRequest,

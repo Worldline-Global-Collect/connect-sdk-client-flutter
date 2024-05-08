@@ -68,11 +68,12 @@ class PaymentProductField implements Comparable {
 
   @override
   int compareTo(other) {
-    if(displayHints == null && other.displayHints == null) {
+    if (displayHints == null && other.displayHints == null) {
       return 0;
     } else {
       return displayHints?.displayOrder
-          .compareTo(other.displayHints?.displayOrder) ?? -1;
+              .compareTo(other.displayHints?.displayOrder) ??
+          -1;
     }
   }
 }

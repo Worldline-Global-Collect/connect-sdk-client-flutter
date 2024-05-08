@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'connect_sdk_client_flutter'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'Connect Flutter SDK iOS Plugin'
   s.description      = <<-DESC
 iOS plugin for the Connect Flutter SDK.

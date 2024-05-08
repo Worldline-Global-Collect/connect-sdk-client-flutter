@@ -1,6 +1,6 @@
 name: connect_sdk_client_flutter
 description: A Flutter package to communicate with the Worldline Global Collect platform
-version: 1.1.1
+version: 1.1.2
 homepage: https://docs.connect.worldline-solutions.com/
 repository: https://github.com/Worldline-Global-Collect/connect-sdk-client-flutter
 issue_tracker: https://github.com/Worldline-Global-Collect/connect-sdk-client-flutter/issues
@@ -16,14 +16,14 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.1.8
-  json_annotation: ^4.8.1
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
-  json_serializable: ^6.7.0
-  build_runner: ^2.4.8
+  flutter_lints: ^3.0.2
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

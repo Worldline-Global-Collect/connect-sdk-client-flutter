@@ -40,12 +40,13 @@ class _ClientApiCommunicator {
         listener);
   }
 
-  _NativeFuture<PrivacyPolicyResponse> getPrivacyPolicy(PrivacyPolicyRequest request,
+  _NativeFuture<PrivacyPolicyResponse> getPrivacyPolicy(
+      PrivacyPolicyRequest request,
       _NativeFutureListener<PrivacyPolicyResponse> listener) {
     final req = jsonEncode(request);
     return _NativeFuture(
         _ClientApiInterface.instance.getPrivacyPolicy(req),
-            (data) => PrivacyPolicyResponse.fromJson(data as Map<String, dynamic>),
+        (data) => PrivacyPolicyResponse.fromJson(data as Map<String, dynamic>),
         listener);
   }
 

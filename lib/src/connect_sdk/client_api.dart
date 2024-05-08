@@ -47,11 +47,11 @@ class ClientApi {
             "Missing assetUrl");
 
   /// Retrieves the [BasicPaymentProducts] from the Connect Gateway.
-  getPaymentProducts(
-      {required void Function(BasicPaymentProducts basicPaymentProducts)
-          onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPaymentProducts({
+    required void Function(BasicPaymentProducts basicPaymentProducts) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     return _communicator
         .getBasicPaymentProducts(_NativeFutureListener(
             success: onSuccess, apiError: onApiError, failure: onFailure))
@@ -59,11 +59,12 @@ class ClientApi {
   }
 
   /// Retrieves the [PaymentProduct] as identified by the provided [paymentProductId] from the Connect Gateway.
-  getPaymentProduct(
-      {required String paymentProductId,
-      required void Function(PaymentProduct paymentProduct) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPaymentProduct({
+    required String paymentProductId,
+    required void Function(PaymentProduct paymentProduct) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request = PaymentProductRequest(productId: paymentProductId);
     return _communicator
         .getPaymentProduct(
@@ -74,12 +75,12 @@ class ClientApi {
   }
 
   /// Retrieves the [BasicPaymentProductGroups] from the Connect Gateway.
-  getPaymentProductGroups(
-      {required void Function(
-              BasicPaymentProductGroups basicPaymentProductGroups)
-          onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPaymentProductGroups({
+    required void Function(BasicPaymentProductGroups basicPaymentProductGroups)
+        onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     return _communicator
         .getBasicPaymentProductGroups(_NativeFutureListener(
             success: onSuccess, apiError: onApiError, failure: onFailure))
@@ -87,11 +88,12 @@ class ClientApi {
   }
 
   /// Retrieves the [PaymentProductGroup] as identified by the provided [paymentProductGroupId] from the Connect Gateway.
-  getPaymentProductGroup(
-      {required String paymentProductGroupId,
-      required void Function(PaymentProductGroup) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPaymentProductGroup({
+    required String paymentProductGroupId,
+    required void Function(PaymentProductGroup) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request = PaymentProductGroupRequest(
         paymentProductGroupId: paymentProductGroupId);
     return _communicator
@@ -103,10 +105,11 @@ class ClientApi {
   }
 
   /// Retrieves the [BasicPaymentItems] from the Connect Gateway.
-  getPaymentItems(
-      {required void Function(BasicPaymentItems) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPaymentItems({
+    required void Function(BasicPaymentItems) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     return _communicator
         .getPaymentItems(_NativeFutureListener(
             success: onSuccess, apiError: onApiError, failure: onFailure))
@@ -114,11 +117,12 @@ class ClientApi {
   }
 
   /// Retrieves the [PaymentProductDirectory] associated to the provided [paymentProductId] from the Connect Gateway.
-  getPaymentProductDirectory(
-      {required String paymentProductId,
-      required void Function(PaymentProductDirectory) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPaymentProductDirectory({
+    required String paymentProductId,
+    required void Function(PaymentProductDirectory) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request = PaymentProductDirectoryRequest(productId: paymentProductId);
     return _communicator
         .getPaymentProductDirectory(
@@ -128,12 +132,14 @@ class ClientApi {
         .awaitJob();
   }
 
-  getPrivacyPolicy(
-      {String? paymentProductId,
-      String? locale,
-      required void Function(PrivacyPolicyResponse privacyPolicyResponse) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPrivacyPolicy({
+    String? paymentProductId,
+    String? locale,
+    required void Function(PrivacyPolicyResponse privacyPolicyResponse)
+        onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request = PrivacyPolicyRequest(
         paymentProductId: paymentProductId, locale: locale);
     return _communicator
@@ -145,11 +151,12 @@ class ClientApi {
   }
 
   /// Retrieves the [IinDetailsResponse] for the provided [partialCreditCardNumber] from the Connect Gateway.
-  getIINDetails(
-      {required String partialCreditCardNumber,
-      required void Function(IinDetailsResponse iinDetailsResponse) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getIINDetails({
+    required String partialCreditCardNumber,
+    required void Function(IinDetailsResponse iinDetailsResponse) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request =
         IinDetailsRequest(partialCreditCardNumber: partialCreditCardNumber);
     return _communicator
@@ -161,10 +168,11 @@ class ClientApi {
   }
 
   /// Retrieves the [PublicKey] from the Connect Gateway.
-  getPublicKey(
-      {required void Function(PublicKey publicKey) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getPublicKey({
+    required void Function(PublicKey publicKey) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     return _communicator
         .getPublicKey(_NativeFutureListener(
             success: onSuccess, apiError: onApiError, failure: onFailure))
@@ -172,11 +180,12 @@ class ClientApi {
   }
 
   /// Retrieves the [ThirdPartyStatusResponse] for the provided [paymentId] from the Connect Gateway.
-  getThirdPartyStatus(
-      {required String paymentId,
-      required void Function(ThirdPartyStatusResponse) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  getThirdPartyStatus({
+    required String paymentId,
+    required void Function(ThirdPartyStatusResponse) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request = ThirdPartyStatusRequest(paymentId);
     return _communicator
         .getThirdPartyStatus(
@@ -191,13 +200,14 @@ class ClientApi {
   ///
   /// [source] and [target] should both be formatted as the 3 letter ISO Currency Code
   /// [amount] is an `int` that represents the amount to be converted in cents and always having 2 decimals.
-  convertAmount(
-      {required String source,
-      required String target,
-      required int amount,
-      required void Function(ConvertedAmount) onSuccess,
-      required void Function(ApiErrorResponse apiError) onApiError,
-      required void Function(NativeException e) onFailure}) {
+  convertAmount({
+    required String source,
+    required String target,
+    required int amount,
+    required void Function(ConvertedAmount) onSuccess,
+    required void Function(ApiErrorResponse apiError) onApiError,
+    required void Function(NativeException e) onFailure,
+  }) {
     final request = ConvertAmountRequest(source, target, amount);
     return _communicator
         .convertAmount(
@@ -211,29 +221,31 @@ class ClientApi {
   ///
   /// It provides all the same optional arguments as [Image.network] except for the `headers` argument.
   /// The url used to retrieve the logo is a combination of [SessionConfiguration.assetUrl] and the provided [logoUrl]
-  Image retrieveLogo(String logoUrl,
-      {Key? key,
-      double scale = 1.0,
-      ImageFrameBuilder? frameBuilder,
-      ImageLoadingBuilder? loadingBuilder,
-      ImageErrorWidgetBuilder? errorBuilder,
-      String? semanticLabel,
-      bool excludeFromSemantics = false,
-      double? width,
-      double? height,
-      Color? color,
-      Animation<double>? opacity,
-      BlendMode? colorBlendMode,
-      BoxFit? fit,
-      AlignmentGeometry alignment = Alignment.center,
-      ImageRepeat repeat = ImageRepeat.noRepeat,
-      Rect? centerSlice,
-      bool matchTextDirection = false,
-      bool gaplessPlayback = false,
-      FilterQuality filterQuality = FilterQuality.low,
-      bool isAntiAlias = false,
-      int? cacheWidth,
-      int? cacheHeight}) {
+  Image retrieveLogo(
+    String logoUrl, {
+    Key? key,
+    double scale = 1.0,
+    ImageFrameBuilder? frameBuilder,
+    ImageLoadingBuilder? loadingBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    String? semanticLabel,
+    bool excludeFromSemantics = false,
+    double? width,
+    double? height,
+    Color? color,
+    Animation<double>? opacity,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    AlignmentGeometry alignment = Alignment.center,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    Rect? centerSlice,
+    bool matchTextDirection = false,
+    bool gaplessPlayback = false,
+    FilterQuality filterQuality = FilterQuality.low,
+    bool isAntiAlias = false,
+    int? cacheWidth,
+    int? cacheHeight,
+  }) {
     final Map<String, String> headers = {
       "Authorization":
           "GCS v1Client:${connectSDKConfiguration.sessionConfiguration.clientSessionId}",

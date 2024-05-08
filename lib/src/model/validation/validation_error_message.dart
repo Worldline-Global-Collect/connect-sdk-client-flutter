@@ -30,6 +30,7 @@ class ValidationErrorMessage {
   final String paymentProductFieldId;
 
   /// If provided, the detailed [ValidationRule] that raised this error message.
+  @JsonKey(fromJson: validationRuleFromJson)
   final ValidationRule? rule;
 
   ValidationErrorMessage(
@@ -47,5 +48,40 @@ class ValidationErrorMessage {
     return json
         .map((vem) => ValidationErrorMessage.fromJson(vem))
         .toList(growable: false);
+  }
+}
+
+ValidationRule? validationRuleFromJson(dynamic json) {
+  String? validationType = json?["validationType"];
+
+  if (validationType == null) {
+    return null;
+  }
+
+  switch (validationType) {
+    case ValidationType.boletoBancarioRequirednessKey:
+      return ValidationRuleBoletoBancarioRequiredness.fromJson(json);
+    case ValidationType.expirationDateKey:
+      return ValidationRuleExpirationDate.fromJson(json);
+    case ValidationType.emailAddressKey:
+      return ValidationRuleEmailAddress.fromJson(json);
+    case ValidationType.fixedListKey:
+      return ValidationRuleFixedList.fromJson(json);
+    case ValidationType.ibanKey:
+      return ValidationRuleIBAN.fromJson(json);
+    case ValidationType.lengthKey:
+      return ValidationRuleLength.fromJson(json);
+    case ValidationType.luhnKey:
+      return ValidationRuleLuhn.fromJson(json);
+    case ValidationType.rangeKey:
+      return ValidationRuleRange.fromJson(json);
+    case ValidationType.regularExpressionKey:
+      return ValidationRuleRegularExpression.fromJson(json);
+    case ValidationType.residentIdNumberKey:
+      return ValidationRuleResidentIdNumber.fromJson(json);
+    case ValidationType.termsAndConditionsKey:
+      return ValidationRuleTermsAndConditions.fromJson(json);
+    default:
+      return ValidationRule(ValidationType.type, "validationRule");
   }
 }
