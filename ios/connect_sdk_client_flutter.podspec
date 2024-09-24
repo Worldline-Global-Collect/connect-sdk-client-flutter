@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'connect_sdk_client_flutter'
-  s.version          = '1.1.2'
+  s.version          = '1.1.3'
   s.summary          = 'Connect Flutter SDK iOS Plugin'
   s.description      = <<-DESC
 iOS plugin for the Connect Flutter SDK.
@@ -15,7 +15,7 @@ iOS plugin for the Connect Flutter SDK.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'WorldlineConnectKit', '~> 6.0'
+  s.dependency 'WorldlineConnectKit', '~> 6.1'
   s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.
