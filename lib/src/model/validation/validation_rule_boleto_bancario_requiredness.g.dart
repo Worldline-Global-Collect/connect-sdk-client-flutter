@@ -28,7 +28,7 @@ ValidationRuleBoletoBancarioRequiredness
     requiredKeys: const ['validationType', 'messageId'],
   );
   return ValidationRuleBoletoBancarioRequiredness(
-    json['fiscalNumberLengthToValidate'] as int,
+    (json['fiscalNumberLengthToValidate'] as num).toInt(),
     $enumDecode(_$ValidationTypeEnumMap, json['validationType']),
     json['messageId'] as String,
   );

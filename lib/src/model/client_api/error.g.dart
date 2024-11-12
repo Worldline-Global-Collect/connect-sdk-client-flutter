@@ -27,7 +27,7 @@ Error _$ErrorFromJson(Map<String, dynamic> json) {
   );
   return Error(
     json['code'] as String,
-    json['httpStatusCode'] as int?,
+    (json['httpStatusCode'] as num?)?.toInt(),
     json['message'] as String?,
     category: json['category'] as String?,
     id: json['id'] as String?,

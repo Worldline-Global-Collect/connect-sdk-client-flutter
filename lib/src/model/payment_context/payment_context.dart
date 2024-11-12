@@ -45,8 +45,12 @@ class PaymentContext {
   @JsonKey(required: false, toJson: localeToJson, fromJson: localeFromJson)
   Locale? locale;
 
+  /// Used when retrieving IIN Details, to indicate whether the product is allowed in context when payment is in installments
+  @JsonKey(required: false)
+  bool isInstallments;
+
   PaymentContext(this.amountOfMoney, this.countryCode, this.isRecurring,
-      {this.forceBasicFlow = false, this.locale});
+      {this.forceBasicFlow = false, this.locale, this.isInstallments = false});
 
   factory PaymentContext.fromJson(Map<String, dynamic> json) =>
       _$PaymentContextFromJson(json);

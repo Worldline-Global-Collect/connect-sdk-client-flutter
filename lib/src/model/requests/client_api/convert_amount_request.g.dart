@@ -28,7 +28,7 @@ ConvertAmountRequest _$ConvertAmountRequestFromJson(Map<String, dynamic> json) {
   return ConvertAmountRequest(
     json['source'] as String,
     json['target'] as String,
-    json['amount'] as int,
+    (json['amount'] as num).toInt(),
   );
 }
 

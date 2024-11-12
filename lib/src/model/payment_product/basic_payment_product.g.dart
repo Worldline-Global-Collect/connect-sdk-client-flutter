@@ -45,8 +45,8 @@ BasicPaymentProduct _$BasicPaymentProductFromJson(Map<String, dynamic> json) {
     autoTokenized: json['autoTokenized'] as bool? ?? false,
     deviceFingerprintEnabled:
         json['deviceFingerprintEnabled'] as bool? ?? false,
-    maxAmount: json['maxAmount'] as int?,
-    minAmount: json['minAmount'] as int?,
+    maxAmount: (json['maxAmount'] as num?)?.toInt(),
+    minAmount: (json['minAmount'] as num?)?.toInt(),
     mobileIntegrationLevel: $enumDecodeNullable(
         _$MobileIntegrationLevelEnumMap, json['mobileIntegrationLevel']),
     paymentProduct302SpecificData: json['paymentProduct302SpecificData'] == null

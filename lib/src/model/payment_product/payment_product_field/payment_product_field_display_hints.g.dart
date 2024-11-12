@@ -25,7 +25,7 @@ PaymentProductFieldDisplayHints _$PaymentProductFieldDisplayHintsFromJson(
     PaymentProductFieldDisplayHints(
       json['alwaysShow'] as bool,
       json['obfuscate'] as bool,
-      json['displayOrder'] as int,
+      (json['displayOrder'] as num).toInt(),
       json['label'] as String?,
       json['placeholderLabel'] as String?,
       json['link'] as String?,

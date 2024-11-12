@@ -20,16 +20,12 @@ part of 'privacy_policy_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PrivacyPolicyRequest _$PrivacyPolicyRequestFromJson(Map<String, dynamic> json) {
-  $checkKeys(
-    json,
-    requiredKeys: const ['paymentProductId'],
-  );
-  return PrivacyPolicyRequest(
-    paymentProductId: json['paymentProductId'] as String?,
-    locale: json['locale'] as String?,
-  );
-}
+PrivacyPolicyRequest _$PrivacyPolicyRequestFromJson(
+        Map<String, dynamic> json) =>
+    PrivacyPolicyRequest(
+      paymentProductId: json['paymentProductId'] as String?,
+      locale: json['locale'] as String?,
+    );
 
 Map<String, dynamic> _$PrivacyPolicyRequestToJson(
         PrivacyPolicyRequest instance) =>

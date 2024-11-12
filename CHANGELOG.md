@@ -1,3 +1,11 @@
+## 1.1.4
+## Added: 
+- Added an `isInstallments` property to `PaymentContext`. The value is `false` by default and will be used during an IIN Details call. The property is used to determine the availability of credit cards for payments that will be made in installments. 
+
+## Updated: 
+- Updated the `PaymentContext` constructor to include an `isInstallments` parameter. This parameter is optional and it is `false` by default. The constructor now looks like `PaymentContext(AmountOfMoney, String, bool, {bool, Locale?, bool?})`. 
+
+
 ## 1.1.3
 ## Updated: 
 - Updated dependencies. 

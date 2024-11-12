@@ -22,7 +22,7 @@ part of 'converted_amount.dart';
 
 ConvertedAmount _$ConvertedAmountFromJson(Map<String, dynamic> json) =>
     ConvertedAmount(
-      json['convertedAmount'] as int,
+      (json['convertedAmount'] as num).toInt(),
     );
 
 Map<String, dynamic> _$ConvertedAmountToJson(ConvertedAmount instance) =>

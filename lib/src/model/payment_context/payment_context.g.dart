@@ -36,6 +36,7 @@ PaymentContext _$PaymentContextFromJson(Map<String, dynamic> json) {
     json['isRecurring'] as bool,
     forceBasicFlow: json['forceBasicFlow'] as bool? ?? false,
     locale: PaymentContext.localeFromJson(json['locale'] as String?),
+    isInstallments: json['isInstallments'] as bool? ?? false,
   );
 }
 
@@ -46,4 +47,5 @@ Map<String, dynamic> _$PaymentContextToJson(PaymentContext instance) =>
       'isRecurring': instance.isRecurring,
       'forceBasicFlow': instance.forceBasicFlow,
       'locale': PaymentContext.localeToJson(instance.locale),
+      'isInstallments': instance.isInstallments,
     };

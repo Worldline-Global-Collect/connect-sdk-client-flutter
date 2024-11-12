@@ -40,7 +40,7 @@ class ConnectSDKConfiguration {
 
   /// This property is used to set the correct SDK identifier when configuring the native SDKs
   @JsonKey(includeToJson: true, name: "sdkIdentifier")
-  final String _sdkIdentifier = "FlutterClientSDK/v1.1.3";
+  final String _sdkIdentifier = "FlutterClientSDK/v1.1.4";
 
   ConnectSDKConfiguration(this.sessionConfiguration,
       {this.enableNetworkLogs = false, this.applicationId, this.ipAddress});
