@@ -13,7 +13,7 @@
  */
 
 /// Library containing all the request models of the SDK.
-library requests;
+library;
 
 // masking
 export 'masking/account_on_file_custom_masked_value_request.dart';

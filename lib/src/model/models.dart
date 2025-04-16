@@ -13,7 +13,7 @@
  */
 
 /// Library containing all the domain models of the SDK.
-library models;
+library;
 
 // exception
 export '../exception/native_exception.dart' show NativeException;

@@ -1,3 +1,9 @@
+## 1.1.5
+## Updated:
+  - Updated dependencies
+  - Updated Android compile SDK to 35
+
+
 ## 1.1.4
 ## Added: 
 - Added an `isInstallments` property to `PaymentContext`. The value is `false` by default and will be used during an IIN Details call. The property is used to determine the availability of credit cards for payments that will be made in installments. 

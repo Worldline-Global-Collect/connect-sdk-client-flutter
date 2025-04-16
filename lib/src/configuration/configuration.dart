@@ -17,7 +17,7 @@
 /// [ConnectSDKConfiguration] is the general configuration for the ConnectSDK. It also holds an instance of
 /// [SessionConfiguration] which is used for the configuration of the session for which the SDK is being initialized.
 /// [PaymentConfiguration] holds configuration for a payment.
-library configuration;
+library;
 
 import 'package:json_annotation/json_annotation.dart';
 

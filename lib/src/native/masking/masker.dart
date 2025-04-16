@@ -12,7 +12,7 @@
  *
  */
 
-library masker;
+library;
 
 import 'package:connect_sdk_client_flutter/src/model/models.dart';
 import 'package:connect_sdk_client_flutter/src/model/requests/requests.dart';

@@ -12,6 +12,6 @@
  *
  */
 
-library extensions;
+library;
 
 part 'string_extensions.dart';

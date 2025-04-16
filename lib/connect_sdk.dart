@@ -18,7 +18,7 @@
 /// [ConnectSDK] provides an entrypoint into the SDK.
 /// This needs to be initialized using a [ConnectSDKConfiguration] and a [PaymentConfiguration].
 /// After initialization, execute API calls using the [ClientApi] or prepare a payment using [ConnectSDK.encryptPaymentRequest]
-library connect_sdk_client_flutter;
+library;
 
 import 'dart:convert';
 
